@@ -5,18 +5,19 @@
     "declaration": true,
     "target": "es6",
     "moduleResolution": "node",
+    "alwaysStrict": false,
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
+    "noImplicitAny": false,
     "paths": {
       "*": [
-        "node_modules/*",
         "src/types/*"
       ]
     }
   },
   "include": [
     "src/**/*",
-    "src/**/*"
+    "test/**/*"
   ]
 }

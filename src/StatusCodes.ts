@@ -1,4 +1,4 @@
-export const statusCodes = {
+export const statusCodes: { [index:number]: string} = {
   400: 'Bad Request',
   401: 'Unauthorized',
   402: 'Payment Required',
