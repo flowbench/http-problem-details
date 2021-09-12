@@ -1,5 +1,5 @@
 // deno-lint-ignore-file
-import { ProblemDocument, ProblemDocumentExtension } from '../src/index.ts'
+import { ProblemDocument, ProblemDocumentExtension } from './mod.ts'
 
 import { assertEquals, assertThrows } from "https://deno.land/std@0.88.0/testing/asserts.ts";
 

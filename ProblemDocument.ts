@@ -23,15 +23,14 @@ export class ProblemDocument {
       title = statusCodes[status]
     }
 
+    /** todo: this was originally based on Node's url.parse which is not compatabl with tthe WHATG standard that Deno aligns to. 
     if (instance) {
-      // eslint-disable-next-line node/no-deprecated-api
-      new URL(instance);
+      new URL(instance); 
     }
+    **/
 
     if (type) {
-      // eslint-disable-next-line node/no-deprecated-api
       new URL(type)
-      // eslint-disable-next-line node/no-deprecated-api
     }
 
     this.type = type
