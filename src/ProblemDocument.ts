@@ -1,5 +1,5 @@
-import { statusCodes } from './StatusCodes'
-import * as url from 'url'
+// deno-lint-ignore-file
+import { statusCodes } from './StatusCodes.ts'
 
 export class ProblemDocument {
   public detail?: string
@@ -25,24 +25,23 @@ export class ProblemDocument {
 
     if (instance) {
       // eslint-disable-next-line node/no-deprecated-api
-      url.parse(instance)
+      new URL(instance);
     }
 
     if (type) {
       // eslint-disable-next-line node/no-deprecated-api
-      url.parse(type)
+      new URL(type)
       // eslint-disable-next-line node/no-deprecated-api
     }
 
-    // const result = {
     this.type = type
-    this.title = title
+    this.title = title ? title : '';
     if (detail) {
       this.detail = detail
     }
     this.instance = instance
-    this.status = status
-    // };
+    this.status = status ? status : 0;
+
 
     if (extension) {
       const extensionProperties = extension instanceof ProblemDocumentExtension
@@ -51,6 +50,7 @@ export class ProblemDocument {
 
       for (const propertyName in extensionProperties) {
         if (extensionProperties.hasOwnProperty(propertyName)) {
+          // @ts-ignore x
           this[propertyName] = extensionProperties[propertyName]
         }
       }
