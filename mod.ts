@@ -1,6 +1,7 @@
-import { ProblemDocumentExtension, ProblemDocument } from './ProblemDocument.ts'
+import { ProblemDocumentExtension, ProblemDocument, ProblemDocumentOptions } from './ProblemDocument.ts'
 
 export {
   ProblemDocument,
-  ProblemDocumentExtension
+  ProblemDocumentExtension,
+  ProblemDocumentOptions
 }
